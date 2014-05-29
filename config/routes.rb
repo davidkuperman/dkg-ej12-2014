@@ -1,10 +1,12 @@
 Ej12::Application.routes.draw do
+  get "users/new"
   get "static_pages/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   match '/about', to: 'static_pages#about', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
   root 'static_pages#home'
 
   # Example of regular route:
